@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Portfolio Website</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-size: 14px; /* Reduced the base font size */
+        }
+
+        .l-main {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .contact {
+            padding: 4rem 0;
+        }
+
+        .contact h2 {
+            font-size: 2rem; /* Adjusted heading size */
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .contact form .form-control {
+            font-size: 1rem; /* Adjusted form input font size */
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .contact form button {
+            font-size: 1rem; /* Adjusted button font size */
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0; /* Reduced footer padding */
+            font-size: 0.85rem; /* Reduced font size */
+        }
+
+        .navbar {
+            padding: 0.5rem 1rem; /* Reduced navbar padding */
+        }
+
+        .navbar-brand {
+            font-size: 1.2rem; /* Reduced navbar brand font size */
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1rem; /* Reduced nav link font size */
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact h2 {
+                font-size: 1.5rem; /* Adjusted for mobile view */
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.9rem; /* Adjusted nav link font size for mobile */
+            }
+
+            .contact form .form-control,
+            .contact form button {
+                font-size: 0.9rem; /* Adjusted form and button font sizes for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Alfebrio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main mt-5 pt-5">
+            <!--===== CONTACT =====-->
+            <section class="contact py-5" id="contact">
+                <div class="container">
+                    <h2 class="text-center mb-5">Contact</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form action="">
+                                <div class="mb-3">
+                                   <input type="text" placeholder="Nama" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" placeholder="Email" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="5" placeholder="Pesan"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer py-4 bg-dark text-center text-light">
+            <div class="container">
+                <p class="footer__title">Alfebrio</p>
+                <div class="footer__social mb-2">
+                <p class="footer__copy">&#169; Universitas Amikom Yogyakarta</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

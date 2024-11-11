@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Portfolio Website</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-size: 14px; /* Reduced the base font size */
+        }
+
+        .l-main {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            text-align: center;
+            background-image: url('assets/img/background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 80vh; /* Reduced the height */
+            padding: 20px; /* Reduced padding */
+        }
+
+        .home h1 {
+            font-size: 2rem; /* Reduced heading size */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0; /* Reduced footer padding */
+            font-size: 0.85rem; /* Reduced font size */
+        }
+
+        .navbar {
+            padding: 0.5rem 1rem; /* Reduced navbar padding */
+        }
+
+        .navbar-brand {
+            font-size: 1.2rem; /* Reduced navbar brand font size */
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1rem; /* Reduced nav link font size */
+        }
+
+        /* Profile image size adjustment */
+        .profile-img {
+            width: 100%;
+            max-width: 00px; /* Smaller profile image */
+            height: auto;
+        }
+
+        /* Adjust heading size */
+        h3 {
+            font-size: 1.5rem; /* Reduced heading size */
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Section Styling */
+        .skills {
+            padding: 5rem 0;
+        }
+
+        .skills h2 {
+            font-size: 2rem; /* Adjusted heading size for skills */
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        /* Progress bar styling */
+        .progress {
+            height: 20px;
+            border-radius: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .progress-bar {
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        /* Skill image styling */
+        .skills-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Wrapper styling */
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .home h1 {
+                font-size: 1.5rem; /* Adjusted for mobile view */
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.9rem; /* Adjusted nav link font size for mobile */
+            }
+
+            h3 {
+                font-size: 1.2rem; /* Adjusted heading size for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Alfebrio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main mt-5 pt-5">
+            <!--===== SKILLS =====-->
+            <section class="skills" id="skills">
+                <div class="container">
+                    <h2 class="text-center mb-5">Skills</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Professional Skills</h3>
+                            <p>Berikut kemampuan yang Saya miliki dalam kehidupan sehari-hari Saya.</p>
+
+                            <!-- Progress Bars -->
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100">Badminton - 90%</div>
+                            </div>
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                                    aria-valuemin="0" aria-valuemax="100">Gaming - 80%</div>
+                            </div>
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                                    aria-valuemin="0" aria-valuemax="100">3D Modelling - 70%</div>
+                            </div>
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                                    aria-valuemin="0" aria-valuemax="100">Ngetik - 60%</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img src="assets/img/work3.jpg" alt="Skills Image" class="skills-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer text-center text-light">
+            <div class="container">
+                <p class="footer__title">Alfebrio</p>
+                <p class="footer__copy">&#169; Universitas Amikom Yogyakarta</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
