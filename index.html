@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Portfolio Website</title>
+    <title>Website Portfolio</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            font-size: 14px; /* Reduced the base font size */
+            font-size: 14px;
+            background-color: slategrey;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .l-main {
@@ -29,42 +32,66 @@
             background-size: cover;
             background-position: center;
             color: white;
-            height: 80vh; /* Reduced the height */
-            padding: 20px; /* Reduced padding */
+            height: 80vh;
+            padding: 20px;
         }
 
         .home h1 {
-            font-size: 2rem; /* Reduced heading size */
+            font-size: 2rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+        }
+
+        .btn-about {
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1.2rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-about:hover {
+            background-color: #666;
+        }
+
+        .navbar {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
         }
 
         .footer {
             background-color: #333;
             color: #fff;
-            padding: 10px 0; /* Reduced footer padding */
-            font-size: 0.85rem; /* Reduced font size */
+            padding: 10px 0;
+            font-size: 0.85rem;
         }
 
-        .navbar {
-            padding: 0.5rem 1rem; /* Reduced navbar padding */
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
-        .navbar-brand {
-            font-size: 1.2rem; /* Reduced navbar brand font size */
-        }
-
-        .navbar-nav .nav-link {
-            font-size: 1rem; /* Reduced nav link font size */
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1080px) {
             .home h1 {
-                font-size: 1.5rem; /* Adjusted for mobile view */
+                font-size: 1.5rem;
             }
 
             .navbar-nav .nav-link {
-                font-size: 0.9rem; /* Adjusted nav link font size for mobile */
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -72,20 +99,19 @@
 
 <body>
     <div class="wrapper">
-        <!--===== HEADER =====-->
         <header class="l-header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
-                    <a class="navbar-brand" href="#">Alfebrio</a>
+                    <a class="navbar-brand" href="#">Home</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="other.html">Other</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
@@ -96,18 +122,21 @@
         <main class="l-main">
             <section class="home py-5" id="home">
                 <div class="container">
-                    <h1>Hi, Selamat Datang di Website<br> Portofolio Saya</h1>
+                    <h1>Hi, Selamat Datang di Website Saya</h1>
+                    <p>Website ini dibuat untuk memenuhi Nilai UTS Mata Kuliah Pemrograman Web</p>
+
+                    <a href="about.html" class="btn-about">Me</a>
                 </div>
             </section>
         </main>
 
-        <!--===== FOOTER =====-->
         <footer class="footer text-center text-light">
             <div class="container">
                 <p class="footer__title">Alfebrio</p>
                 <p class="footer__copy">&#169; Universitas Amikom Yogyakarta</p>
             </div>
         </footer>
+        
     </div>
 
     <script src="assets/js/bootstrap.min.js"></script>

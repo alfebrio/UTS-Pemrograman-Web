@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Portfolio Website</title>
+    <title>Website Portofolio</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            font-size: 14px; /* Reduced the base font size */
+            font-size: 14px;
+            background-color: slategrey;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .l-main {
@@ -21,66 +24,77 @@
 
         .contact {
             padding: 4rem 0;
+            text-align: center;
         }
 
         .contact h2 {
-            font-size: 2rem; /* Adjusted heading size */
+            font-size: 2rem;
             font-weight: 700;
-            color: #333;
+            color: white;
             margin-bottom: 2rem;
         }
 
-        .contact form .form-control {
-            font-size: 1rem; /* Adjusted form input font size */
-            padding: 1rem;
+        .map-container {
+            width: 100%;
+            max-width: 800px;
+            height: 250px;
+            margin: 0 auto 2rem auto;
             border-radius: 8px;
-            border: 1px solid #ddd;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            border: 2px solid #333;
         }
 
-        .contact form button {
-            font-size: 1rem; /* Adjusted button font size */
-            padding: 1rem;
-            border-radius: 8px;
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            object-fit: cover;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            border: 2px solid #333;
+        }
+
+        .contact-details {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            padding: 0.5rem;
+        }
+
+        .navbar {
+            padding: 0.5rem 1rem;
+            background-color: #333 !important;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
         }
 
         .footer {
             background-color: #333;
             color: #fff;
-            padding: 10px 0; /* Reduced footer padding */
-            font-size: 0.85rem; /* Reduced font size */
+            padding: 10px 0;
+            font-size: 0.85rem;
         }
 
-        .navbar {
-            padding: 0.5rem 1rem; /* Reduced navbar padding */
-        }
-
-        .navbar-brand {
-            font-size: 1.2rem; /* Reduced navbar brand font size */
-        }
-
-        .navbar-nav .nav-link {
-            font-size: 1rem; /* Reduced nav link font size */
-        }
-
-        .wrapper {
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1080px) {
             .contact h2 {
-                font-size: 1.5rem; /* Adjusted for mobile view */
+                font-size: 1.5rem;
             }
 
             .navbar-nav .nav-link {
-                font-size: 0.9rem; /* Adjusted nav link font size for mobile */
-            }
-
-            .contact form .form-control,
-            .contact form button {
-                font-size: 0.9rem; /* Adjusted form and button font sizes for mobile */
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -88,11 +102,10 @@
 
 <body>
     <div class="wrapper">
-        <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
-                    <a class="navbar-brand" href="#">Alfebrio</a>
+                    <a class="navbar-brand" href="#">Contact</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -101,7 +114,7 @@
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="other.html">Other</a></li>
                             <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
@@ -109,38 +122,28 @@
             </nav>
         </header>
 
-        <main class="l-main mt-5 pt-5">
-            <!--===== CONTACT =====-->
+        <main class="l-main">
             <section class="contact py-5" id="contact">
                 <div class="container">
-                    <h2 class="text-center mb-5">Contact</h2>
-                    <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <form action="">
-                                <div class="mb-3">
-                                   <input type="text" placeholder="Nama" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" placeholder="Email" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" rows="5" placeholder="Pesan"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Send</button>
-                            </form>
-                        </div>
+                    <h2>Kontak Pribadi</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.2818903271077!2d110.40647117485715!3d-7.759899576956062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599bd3bdc4ef%3A0x6f1714b0c4544586!2sUniversitas%20Amikom%20Yogyakarta!5e0!3m2!1sid!2sid!4v1731439728866!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <img src="assets/img/contact.jpg" alt="Contact Photo" class="contact-photo">
+                    <div class="contact-details">
+                        <p>Alfebrio Setia Nugraha</p>
+                        <p>23.83.1009</p>
+                        <p>+62 895 3846 41500</p>
+                        <p>alfebriosetianugraha@students.amikom.ac.id</p>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer py-4 bg-dark text-center text-light">
+        <footer class="footer text-center text-light">
             <div class="container">
                 <p class="footer__title">Alfebrio</p>
-                <div class="footer__social mb-2">
                 <p class="footer__copy">&#169; Universitas Amikom Yogyakarta</p>
-                </div>
             </div>
         </footer>
     </div>

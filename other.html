@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Website Portfolio</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-size: 14px;
+            background-color: slategrey;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .l-main {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .other {
+            padding: 5rem 0;
+        }
+
+        .other h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .progress {
+            height: 25px;
+            border-radius: 10px;
+            background-color: #f1f1f1;
+            border: 2px solid #333;
+        }
+
+        .progress-bar {
+            text-align: center;
+            line-height: 25px;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .other-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            border: 2px solid #333;
+        }
+
+        .contact-btn {
+            display: block;
+            width: fit-content;
+            margin: 2rem auto 3rem;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #666;
+        }
+
+        .navbar {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 0.85rem;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 1080px) {
+            .home h1 {
+                font-size: 1.5rem;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="l-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Other</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="other.html">Other</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <section class="other py-5" id="other">
+                <div class="container">
+                    <h2 class="text-center mb-5">Hobi</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Saya memiliki berbagai hobi dalam kehidupan sehari-hari Saya</p>
+                            <p>Berikut beberapa Hobi dan Skill yang Saya miliki :</p>
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;" aria-valuenow="100"
+                                    aria-valuemin="0" aria-valuemax="100">Badminton</div>
+                            </div>
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100">Gaming</div>
+                            </div>
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                                    aria-valuemin="0" aria-valuemax="100">Koleksi Diecast</div>
+                            </div>
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                                    aria-valuemin="0" aria-valuemax="100">Merakit Sesuatu</div>
+                            </div>
+                            <div class="progress my-3">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100">3D Modelling</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h3>Badminton</h3>
+                            <p>Saya telah bermain Badminton sejak Kelas 2 SD.</p>
+                            <p>Selama masa SD - SMP, Saya telah mengikuti berbagai Kejurkab dan Kejurnas, bahkan Kejuaraan Tarkam hingga Saya mengalami cedera di bagian pergelangan tangan. Sejak itu Saya berhenti bermain hingga bertahun-tahun.</p>
+                            <p>Untuk saat ini saya sering menyempatkan untuk bermain kurang lebih seminggu 2x sebagai Hobi, dan terkadang mengikuti Kejuaraan kecil sebagai kegiatan.</p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img src="assets/img/other.jpg" alt="Other Image" class="img-fluid rounded other-image">
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h3>Gaming</h3>
+                            <p>Untuk Hobi ini sendiri Saya telah disuguhi PlayStation sejak berumur 3,5 tahun.</p>
+                            <p>Game yang pertama kali saya mainkan adalah Seri Digimon dan Rumble Racing. Sejak saat itu Saya tidak pernah bosan bermain berbagai genre game, terutama Arcade dan Racing.</p>
+                            <p>Saat SMP, Anak-anak mulai bermain di platform Mobile, dan Saya pun mengikuti alur. Game mobile online pertama yang saya mainkan adalah Clash of Clans.</p>
+                            <p>Suatu waktu terdapat Game moba baru yang dirilis bernama Mobile Legends. Saya cukup excited karena sebelumnya Saya cukup sering bermain Game moba PC yaitu Dota 2. Sejak saat itu saya sedikit aktif di Game tersebut hingga dapat memenangkan beberapa kompetisi lokal dan menjadi penjoki untuk menambah uang saku. Saya juga bermain berbagai Game lain di platform PC</p>
+                            <p>Jadi, kurang lebih Saya adalah pemain di semua platform Game</p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img src="assets/img/other2.jpg" alt="Other Image 2" class="img-fluid rounded other-image">
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h3>Other</h3>
+                            <p>Hobi hobi sampingan lain ini untuk mengisi waktu yang benar benar luang.</p>
+                            <p>Seperti Koleksi Diecast, Saya mengoleksi Diecast sejak TK dengan beberapa brand seperti Hot Wheels, MiniGT, Ignition Model, Inno64, Tarmac, Time Micro, dsb. Hobi satu ini cukup menguras uang Saya :D.</p>
+                            <p>Saya juga suka merakit sesuatu seperti Komponen PC, IOT, Gundam, dan Lego.</p>
+                            <p>Terakhir 3D Modelling. Saya telah mempelajarinya secara otodidak sejak SMP dengan menonton Playlist Youtube, menggunakan aplikasi Blender dan Autodesk 3Ds. Saat benar-benar senggang, biasanya Saya membuat mod untuk game-game seperti GTA, NFS, dsb.</p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img src="assets/img/other3.jpg" alt="Other Image 3" class="img-fluid rounded other-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+                    <a href="contact.html" class="contact-btn">Contact Me</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer text-center text-light">
+            <div class="container">
+                <p class="footer__title">Alfebrio</p>
+                <p class="footer__copy">&#169; Universitas Amikom Yogyakarta</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Portfolio Website</title>
+    <title>Website Portfolio</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            font-size: 14px; /* Reduced the base font size */
+            font-size: 14px;
+            background-color: slategray;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .l-main {
@@ -18,84 +21,93 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
-        .home {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-grow: 1;
-            text-align: center;
-            background-image: url('assets/img/background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            height: 80vh; /* Reduced the height */
-            padding: 20px; /* Reduced padding */
+        
+        .about {
+            padding: 40px 0;
         }
 
-        .home h1 {
-            font-size: 2rem; /* Reduced heading size */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .about h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .about p {
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            border: 2px solid #333;
+        }
+
+        .mt-gap {
+            margin-top: 20px;
+        }
+
+        .contact-btn {
+            display: block;
+            width: fit-content;
+            margin: 4rem auto 0;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #666;
+        }
+
+        .navbar {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
         }
 
         .footer {
             background-color: #333;
             color: #fff;
-            padding: 10px 0; /* Reduced footer padding */
-            font-size: 0.85rem; /* Reduced font size */
+            padding: 10px 0;
+            font-size: 0.85rem;
         }
 
-        .navbar {
-            padding: 0.5rem 1rem; /* Reduced navbar padding */
-        }
-
-        .navbar-brand {
-            font-size: 1.2rem; /* Reduced navbar brand font size */
-        }
-
-        .navbar-nav .nav-link {
-            font-size: 1rem; /* Reduced nav link font size */
-        }
-
-        /* Profile image size adjustment */
-        .profile-img {
-            width: 100%;
-            max-width: 300px; /* Smaller profile image */
-            height: auto;
-        }
-
-        /* Adjust heading size */
-        h3 {
-            font-size: 1.5rem; /* Reduced heading size */
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        /* Adjust padding and margins for compact layout */
         .wrapper {
             min-height: 100%;
             display: flex;
             flex-direction: column;
         }
 
-        /* Adjust section and footer for more compact design */
-        .about {
-            padding: 40px 0; /* Reduced padding for about section */
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1080px) {
             .home h1 {
-                font-size: 1.5rem; /* Adjusted for mobile view */
+                font-size: 1.5rem;
             }
 
             .navbar-nav .nav-link {
-                font-size: 0.9rem; /* Adjusted nav link font size for mobile */
+                font-size: 0.9rem;
             }
 
             h3 {
-                font-size: 1.2rem; /* Adjusted heading size for mobile */
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -103,20 +115,19 @@
 
 <body>
     <div class="wrapper">
-        <!--===== HEADER =====-->
         <header class="l-header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
-                    <a class="navbar-brand" href="#">Alfebrio</a>
+                    <a class="navbar-brand" href="#">About</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="other.html">Other</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
@@ -125,24 +136,41 @@
         </header>
 
         <main class="l-main">
-            <!--===== ABOUT =====-->
             <section class="about py-5" id="about">
                 <div class="container">
-                    <h2 class="text-center mb-5">About Me</h2>
+                    <h2 class="text-center mb-5">Profile</h2>
                     <div class="row justify-content-center">
                         <div class="col-md-6 mb-3 text-center">
-                            <img src="assets/img/about.jpg" alt="Profile Image" class="img-fluid rounded profile-img">
+                            <img src="assets/img/about.jpg" alt="Profile Image" class="img-fluid rounded profile-image">
                         </div>
-                        <div class="col-md-6">
-                            <h3>Alfebrio Setia Nugraha</h3>
-                            <p>Insert a short description or biography about yourself here.</p>
+                        <div class="col-md-6 mb-4">
+                            <h3>Detail</h3>
+                            <p></p>
+                            <p style="font-weight: bold;">Nama :</p>
+                            <p>Alfebrio Setia Nugraha</p>
+                            <p style="font-weight: bold;">Umur :</p>
+                            <p>19 Tahun</p>
+                            <p style="font-weight: bold;">Asal :</p>
+                            <p>Kebumen, Jawa Tengah, Indonesia</p>
+                        </div>
+
+                        <div class="col-md-6 mb-3 text-center mt-gap">
+                            <img src="assets/img/about2.jpg" alt="Another Profile Image" class="img-fluid rounded profile-image">
+                        </div>
+                        <div class="col-md-6 mt-gap">
+                            <h3>About Me</h3>
+                            <p></p>
+                            <p>Saya adalah seorang Mahasiswa di Universitas Amikom Yogyakarta yang tengah menempuh Program Studi S1 Teknik Komputer.</p>
+                            <p>Saya memiliki minat dalam bidang teknologi, dan bercita-cita untuk berkontribusi dalam pengembangan teknologi di masa depan terutama Blockchain dan Robotika</p>
+                            <p>Di luar dunia akademik, Saya juga senang berpartisipasi dalam berbagai kompetisi yang berkaitan dengan Hobi, dan Saya sangat senang untuk mencoba hal baru seperti Pemrograman Web kali ini</p>
                         </div>
                     </div>
+
+                    <a href="other.html" class="contact-btn">Other</a>
                 </div>
             </section>
         </main>
 
-        <!--===== FOOTER =====-->
         <footer class="footer text-center text-light">
             <div class="container">
                 <p class="footer__title">Alfebrio</p>
